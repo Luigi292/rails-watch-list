@@ -7,7 +7,7 @@ class ListsController < ApplicationController
 
   def show
     @bookmark = Bookmark.new
-    @review = Review.new(list: @list)
+    @review = Review.new(list_id: @list.id) # Provide the list_id attribute
   end
 
   def new
